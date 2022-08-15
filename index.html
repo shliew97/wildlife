@@ -117,6 +117,26 @@
                     gesture-handler
                 ></a-entity>
             </a-marker>
+            <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/marker_6.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerF"
+            >
+                <a-entity
+                    src="assets/asset_6.gif"
+                    geometry="primitive:plane;"
+                    material="shader:gif;src:url(assets/asset_6.gif);"
+                    scale="1 1 1"
+                    class="clickable"
+                    rotation="-90 0 0"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
