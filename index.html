@@ -1,143 +1,56 @@
 <!doctype html>
 <html>
-    <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-        <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
-    </head>
 
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-            id="scene"
-            embedded
-            gesture-detector
-        >
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
-                <a-entity
-                    src="assets/asset.gif"
-                    geometry="primitive:plane;"
-                    material="shader:gif;src:url(assets/asset.gif);"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker_2.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerB"
-            >
-                <a-entity
-                    src="assets/asset_2.gif"
-                    geometry="primitive:plane;"
-                    material="shader:gif;src:url(assets/asset_2.gif);"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker_3.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerC"
-            >
-                <a-entity
-                    src="assets/asset_3.gif"
-                    geometry="primitive:plane;"
-                    material="shader:gif;src:url(assets/asset_3.gif);"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker_4.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerD"
-            >
-                <a-entity
-                    src="assets/asset_4.gif"
-                    geometry="primitive:plane;"
-                    material="shader:gif;src:url(assets/asset_4.gif);"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker_5.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerE"
-            >
-                <a-entity
-                    src="assets/asset_5.gif"
-                    geometry="primitive:plane;"
-                    material="shader:gif;src:url(assets/asset_5.gif);"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker_6.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerF"
-            >
-                <a-entity
-                    src="assets/asset_6.gif"
-                    geometry="primitive:plane;"
-                    material="shader:gif;src:url(assets/asset_6.gif);"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-            <a-entity camera></a-entity>
-        </a-scene>
-    </body>
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script
+        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script
+        src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+    <a-scene vr-mode-ui="enabled: false;" loading-screen="enabled: false;"
+        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
+        <a-marker id="animated-marker" type="pattern" preset="custom" url="assets/marker.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+            <a-entity src="assets/asset.gif" geometry="primitive:plane;"
+                material="shader:gif;src:url(assets/asset.gif);" scale="1 1 1" class="clickable" rotation="-90 0 0"
+                gesture-handler></a-entity>
+        </a-marker>
+        <a-marker id="animated-marker" type="pattern" preset="custom" url="assets/marker_2.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerB">
+            <a-entity src="assets/asset_2.gif" geometry="primitive:plane;"
+                material="shader:gif;src:url(assets/asset_2.gif);" scale="1 1 1" class="clickable" rotation="-90 0 0"
+                gesture-handler></a-entity>
+        </a-marker>
+        <a-marker id="animated-marker" type="pattern" preset="custom" url="assets/marker_3.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerC">
+            <a-entity src="assets/asset_3.gif" geometry="primitive:plane;"
+                material="shader:gif;src:url(assets/asset_3.gif);" scale="1 1 1" class="clickable" rotation="-90 0 0"
+                gesture-handler></a-entity>
+        </a-marker>
+        <a-marker id="animated-marker" type="pattern" preset="custom" url="assets/marker_4.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerD">
+            <a-entity src="assets/asset_4.gif" geometry="primitive:plane;"
+                material="shader:gif;src:url(assets/asset_4.gif);" scale="1 1 1" class="clickable" rotation="-90 0 0"
+                gesture-handler></a-entity>
+        </a-marker>
+        <a-marker id="animated-marker" type="pattern" preset="custom" url="assets/marker_5.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerE">
+            <a-entity src="assets/asset_5.gif" geometry="primitive:plane;"
+                material="shader:gif;src:url(assets/asset_5.gif);" scale="1 1 1" class="clickable" rotation="-90 0 0"
+                gesture-handler></a-entity>
+        </a-marker>
+        <a-marker id="animated-marker" type="pattern" preset="custom" url="assets/marker_6.patt"
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerF">
+            <a-image src="assets/asset_6.jpeg" scale="1 1 1" class="clickable" rotation="-90 0 0" gesture-handler>
+            </a-image>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
 </html>
